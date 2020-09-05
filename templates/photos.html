@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photos</title>
+</head>
+<body>
+{% for pic in pics %}
+    <div>
+        <p>name: {{ pic.img_name }}</p>
+    <img src='{{ MEDIA_URL }}{{ pic.img_src }}'>
+
+    </div>
+{% endfor %}
+</body>
+</html>
